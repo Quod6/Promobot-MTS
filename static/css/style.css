@@ -1,0 +1,694 @@
+@font-face {
+    font-family: 'DOCKER One';
+    src: url('DOCKERONE.eot');
+    src: url('DOCKERONE.eot?#iefix') format('embedded-opentype'),
+    url('DOCKERONE.woff') format('woff'),
+    url('DOCKERONE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	outline: none;
+}
+
+body{
+    font-family: 'DOCKER One';
+    font-size: 20px;
+    background: no-repeat #fff;
+    background-size: 1920px 1080px;
+	color: #fff;
+    overflow:hidden;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+input, select, a.btn{
+	font-family: sans-serif;
+	background: #fff;
+	border-radius: 10px;
+	border: 2px solid #eaeaea;
+	width: 700px;
+	height: 50px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 20px;
+	color: #000;
+}
+
+input:focus, select:focus{
+	border: 2px solid #f82133;
+	outline: none !important;
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+
+.left{
+	text-align: left;
+}
+
+.center{
+	text-align: center;
+}
+
+.right{
+	text-align: right;
+}
+
+.justify{
+	text-align: justify;
+}
+
+.leftimg {
+	float:left; /* Выравнивание по левому краю */
+	margin: 7px 7px 0px 0; /* Отступы вокруг картинки */
+}
+
+.rightimg  {
+	float: right; /* Выравнивание по правому краю  */ 
+	margin: 7px 0 0px 7px; /* Отступы вокруг картинки */
+}
+
+.button{
+	background: #E30611;
+	border: 2px solid white;
+	border-radius: 15px;
+	text-align: center;
+}
+
+a.btn{
+	width: 1000px;
+	height: 40px;
+	padding: 10px;
+}
+
+a.next{
+	border: 2px solid #cefdce;
+}
+a.next:hover, a.next:focus{
+	border: 2px solid #06c609;
+}
+
+a.skip{
+	border: 2px solid #fecdd0;
+}
+a.skip:hover, a.skip:focus{
+	border: 2px solid #c7050f;
+}
+
+.popup_btn{
+	transition: all .2s ease;
+}
+
+
+.colourful_button{
+	padding: 5px;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	box-shadow: none;
+	border: none;
+	cursor: pointer;
+	background: #E30611
+}
+
+table{
+	border-radius: 10px;
+	border: 2px solid #d1d1d1;
+	background: #fff;
+	text-align: left;
+	color: #E30611;
+	padding: 10px;
+	font-size: 30px;
+	width: 1920px;
+}
+
+span{
+	padding: 50px;
+
+}
+
+#bar{
+	border-radius: 10px;
+	border: 2px solid #E30611;
+	background: #fff;
+	text-align: center;
+	color: #E30611;
+	margin: 20px;
+	margin-left: 250px;
+	margin-right: 250px; 
+	height: 50px;
+	padding: 5px;
+	font-size: 30px;
+}
+
+.vert_line{
+	width: 5px;
+	height: 32px;
+	
+}
+
+.back_btn{
+	cursor: pointer;
+}
+
+.faq_btn{
+	cursor: pointer;
+}
+
+/*menu*/
+
+#menu{
+	/*width: 79.4%;*/
+	margin-left: 50px;
+	height: 1080px;
+}
+
+.big_button{
+	width: 801px;
+	height: 417px;
+	margin-bottom: 104px;
+	background-size: 801px 417px;
+}
+.small_button{
+	margin: 26px;
+	width: 198px;
+	height: 198px;
+	background-size: 190px 190px;
+	
+}
+
+.wifi_button{
+	margin: 26px;
+	margin-top: 16px;
+	width: 448px;
+	height: 198px;
+	background-size: 448px 194px;
+}
+
+/*separators*/
+
+.separator{
+	background: #E30611;
+	width: 15px;
+	height: 1080px;
+	float: left;
+	border-right: 4px solid white;
+	border-left: 4px solid white;
+	margin-left: 15px;
+}
+
+.solid_separator{
+	background: #fff;
+	width: 6px;
+	height: 1080px;
+}
+
+
+/*partners*/
+
+#partners{
+	/*width: 20.6%;*/
+	margin-right: -50px;
+	height: 1080px;
+	float: right;
+}
+
+.partners_button{
+	margin: 52px;
+	margin-top: 244px;
+	margin-bottom: 148px;
+	padding: 10px;
+	width: 280px;
+	height: 100px;
+	background-size: 270px 90px;
+
+}
+
+/*language*/
+
+.lang_btn{
+	margin: 20px;
+	width: 100px;
+	height: 100px;
+	color: #d1d1d1;
+	font-size: 40px;
+	background: #fff;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.lang_btn:active{
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+/*video*/
+
+.control_btn{
+	border: 2px solid #E30611;
+	border-radius: 10px;
+	background: #fff;
+	width: 250px;
+	height: 50px
+}
+
+/*popup*/
+.crd_popup{
+	position: absolute;
+	min-width: 800px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	padding-top: 80px;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #00113f;
+	border-radius: 10px;
+	border: 5px solid #00113f;
+	box-shadow: 0 0 100px rgba(0,0,0,1.7);
+}
+
+.crd_close-popup-bg {
+	position: absolute;
+	top: 0px;
+	right: -1px;
+	width: 100.2%;
+	height: 40px;
+	cursor: pointer;
+	background: #00113f;
+	border-radius: 3px 3px 0px 0px;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	min-width: 800px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	padding-top: 80px;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: #E30611;
+	border-radius: 10px;
+	border: 5px solid #E30611;
+	box-shadow: 0 0 100px rgba(0,0,0,1.7);
+}
+
+.close-popup {
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.close-popup-bg {
+	position: absolute;
+	top: 0px;
+	right: -1px;
+	width: 100.2%;
+	height: 40px;
+	cursor: pointer;
+	background: #E30611;
+	border-radius: 3px 3px 0px 0px;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+}
+
+.close-popup::before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+.close-popup::after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.popup {
+		width: 100%;
+		height: 100vh;
+		font-size: 15px;
+	}
+}
+
+/*camera*/
+
+#camera_bar{
+	background: #E30611;
+	/*border-left: 6px solid white;*/
+	height: 1080px;
+}
+
+#filter{
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+#filter_selector{
+	width: 1450px;
+	height: 250px;
+	background: #fff;
+	text-align: center;
+}
+
+.filter_example{
+	margin: 30px auto 30px;
+	border-radius: 5px;
+	border: 2px solid #E30611;
+	background: #fff;
+	text-align: center;
+	color: #E30611;
+	width: 300px;
+	height: 150px;
+}
+
+.filter_example:active{
+	background: #eaeaea;
+}
+
+#take_a_photo{
+	border-radius: 50%;
+	background: #fff;
+	width: 300px;
+	height: 300px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+#take-photo{
+	margin: 25px;
+	border-radius: 50%;
+	background: #fff;
+	width: 250px;
+	height: 250px;
+	border: 10px solid #E30611;
+}
+
+#take-photo:active{
+	margin: 25px;
+	border-radius: 50%;
+	background: #eaeaea;
+	width: 250px;
+	height: 250px;
+	border: 10px solid #E30611;
+}
+
+
+.abc{
+	margin: 25px;
+	border-radius: 50%;
+	background: #fff;
+	width: 250px;
+	height: 250px;
+	border: 10px solid #E30611;
+}
+
+.abc:active{
+	margin: 25px;
+	border-radius: 50%;
+	background: #eaeaea;
+	width: 250px;
+	height: 250px;
+	border: 10px solid #E30611;
+}
+
+
+.video {
+ height: 0;
+ position: relative;
+ padding-bottom: 56.25%;
+}
+.video iframe {
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+}
+
+/*----------------------------------------------------------------*/
+
+.app{
+    width: 100%;
+    position: relative;
+}
+
+.app #start-camera{
+    display: none;
+    border-radius: 3px;
+    max-width: 400px;
+    color: #fff;
+    background-color: #448AFF;
+    text-decoration: none;
+    padding: 15px;
+    opacity: 0.8;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.app video#camera-stream{
+    display: none;
+    width: 100%;
+}
+
+.app img#snap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.app #error-message{
+    width: 100%;
+    background-color: #ccc;
+    color: #9b9b9b;
+    font-size: 28px;
+    padding: 200px 100px;
+    text-align: center;
+    display: none;
+}
+
+.app .controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+
+
+}
+
+.app .controls a{
+	display: block;
+    border-radius: 10px;
+    border: 3px solid #E30611;
+    color: #E30611;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 0;
+    opacity: 0.8;
+    outline: none;
+	font-size: 30px;
+	text-align: center;
+}
+
+.app .controls a:active{
+    opacity: 1;
+    display: block;
+}
+
+.app .controls a.disabled{
+
+    display: none;
+}
+
+.disabled{
+	opacity: 0;
+    display: none;
+}
+
+.app .controls a.disabled:active{
+
+    display: none;
+}
+
+.app .controls a i{
+    font-size: 18px;
+}
+
+.app .controls #take-photo i{
+    font-size: 32px;
+}
+
+.app canvas{
+    display: none;
+}
+
+#overlay{
+	background: #000;
+	width: 1435px;
+	height: 1080px;
+	opacity: 0;
+	display: block;
+	z-index: 10;
+	margin-top: -1080px;
+	vertical-align: middle;
+}
+
+#overlay-t{
+	width: 1435px;
+	height: 1080px;
+	opacity: 0;
+	display: block;
+	z-index: 11;
+	
+	vertical-align: middle;
+}
+#overlay-m{
+	width: 1435px;
+	height: 1080px;
+	opacity: 0;
+	display: block;
+	z-index: 11;
+	margin-top: -1080px;
+	vertical-align: middle;
+}
+
+
+.app video#camera-stream.visible,
+.app img#snap.visible,
+.app #error-message.visible
+{
+    display: block;
+}
+
+.app .controls.visible{
+    display: flex;
+}
+
+/*----------------------------------------------------------------*/
+/*MAP*/
+
+.map_btn{
+	width: 240px;
+	height: 80px;
+	background: #fff;
+	border: none;
+	font-size: 20px;
+	color: #fc838d;
+	border-radius: 4px;
+	border: 2px solid #fc838d;
+}
+
+.map_btn:hover, .map_btn:active{
+	color: #E30611;
+	border: 2px solid #E30611;
+}
+
+.btn_bar{
+  	top: -50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+
+/*----------------------------------------------------------------*/
+/*FAQ*/
+
+
+#answers{
+	margin-left: 60px;
+	margin-top: 30px;
+	width: 1266px;
+	height: 930px;
+	padding: 10px;
+}
+
+#questions{
+	margin-left: 54px;
+	margin-top: 30px;
+	width: 508px;
+	height: 930px;
+	padding: 10px;
+}
+
+
+/*----------------------------------------------------------------*/
+/*INFO*/
+
+#info{
+	background: #fff;
+	margin: auto;
+	height: 900px;
+	width: 1800px;
+	border-radius: 10px;
+	border: 2px solid #fc838d;
+	opacity: 1;
+	color: #E30611;
+	padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+button, button:hover, button:focus, button:active, .lang_btn, .lang_btn:focus, .lang_btn:active{
+}

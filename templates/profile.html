@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin_style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+	
+		<div class="row">
+
+			<div class="col-sm-3"></div>
+
+			<div class="col-sm-6 center">
+				<form method="POST" enctype="multipart/form-data">
+					<p>Старый пароль</p>
+					{% if password_error == True %}
+						<input style="background: #fc838d; border: 2px solid red; color: #fff;" type="text" name="password" placeholder="Неверный пароль">
+					{% else %}
+						<input type="text" name="password" placeholder="Введите старый пароль">
+					{% endif %}
+					<div class="hr"></div>
+					<p>Имя</p>
+					<input type="text" name="new_name"  placeholder="Введите имя">
+					<p>Фамилия</p>
+					<input type="text" name="new_second_name"  placeholder="Введите Фамилию">
+					<p>Выберите картинку для профиля (размер изображения - 200х212)</p>
+					<label for="uploadbtn" class="uploadButton">Загрузить файл</label>
+					<input style="opacity: 0; z-index: -1;" type="file" name="profile_photo" id="uploadbtn" accept="image/jpeg">
+					<p>Логин</p>
+					<input type="text" name="new_login"  placeholder="Введите новый логин">
+					<p>Пароль</p>
+					<input type="text" name="new_password"  placeholder="Введите новый пароль">
+					<input type="submit" value="Применить изменения" style="color: #000;">
+				</form>
+				<a class="back" href="/administrator">Вернуться в админ панель</a>
+			</div>
+
+			<div class="col-sm-3"></div>
+	
+		</div>
+
+</body>
+</html>

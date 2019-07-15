@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin_style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+	
+		<div class="row">
+
+			<div class="col-sm-3"></div>
+
+			<div class="col-sm-6 center">
+				<form method="POST" enctype="multipart/form-data">
+					<p>Логин</p>
+					<input type="text" name="login"  placeholder="Введите новый логин">
+					<p>Пароль</p>
+					<input type="password" name="password"  placeholder="Введите новый пароль">
+					<input type="submit" value="Войти" style="color: #000;">
+				</form>
+				<a class="back" href="" style="color: #afa6a6;">на гланую</a>
+			</div>
+
+			<div class="col-sm-3"></div>
+	
+		</div>
+
+</body>
+</html>

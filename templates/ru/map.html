@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/bg.jpg') }}'); ">
+
+		
+	<div id="bar" class="row">
+		<a href="/" class="back_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/back.png') }}" width="32" style="text-align: center;"></a>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<div class="col-sm-6">Карта мероприятия</div>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<a href="/faq" class="faq_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/faq.png') }}" width="32" style="text-align: center;"></a>
+	</div>
+	<div class="row">
+		<div class="col-sm-9" style="height: 1080px;">
+			<img id="map" src="{{ url_for('static', filename='map/map1.png') }}" width="1460" height="1080" alt="Карта не обноружена. Загрузите ее через панель администратора.">
+
+		</div>
+		<div class="col-sm-3 center btn_bar">
+			<script type="text/javascript">
+				var map1="{{ url_for('static', filename='map/map1.png') }}"
+				var map2="{{ url_for('static', filename='map/map2.png') }}"
+				var map3="{{ url_for('static', filename='map/map3.png') }}"
+				var map4="{{ url_for('static', filename='map/map4.png') }}"
+				var map5="{{ url_for('static', filename='map/map5.png') }}"
+				var map6="{{ url_for('static', filename='map/map6.png') }}"
+				var map7="{{ url_for('static', filename='map/map7.png') }}"
+				var map8="{{ url_for('static', filename='map/map8.png') }}"
+				var map9="{{ url_for('static', filename='map/map9.png') }}"
+			</script>
+			<button class="map_btn" style="display: {{floor_a_status}};" onclick="document.getElementById('map').src=map1">{{floor_a_name}}</button>
+			<br style="display: {{floor_b_status}};">
+			<br style="display: {{floor_b_status}};">
+			<button class="map_btn" style="display: {{floor_b_status}};" onclick="document.getElementById('map').src=map2">{{floor_b_name}}</button>
+			<br style="display: {{floor_c_status}};">
+			<br style="display: {{floor_c_status}};">
+			<button class="map_btn" style="display: {{floor_c_status}};" onclick="document.getElementById('map').src=map3">{{floor_c_name}}</button>
+			<br style="display: {{floor_d_status}};">
+			<br style="display: {{floor_d_status}};">
+			<button class="map_btn" style="display: {{floor_d_status}};" onclick="document.getElementById('map').src=map4">{{floor_d_name}}</button>
+			<br style="display: {{floor_e_status}};">
+			<br style="display: {{floor_e_status}};">
+			<button class="map_btn" style="display: {{floor_e_status}};" onclick="document.getElementById('map').src=map5">{{floor_e_name}}</button>
+			<br style="display: {{floor_f_status}};">
+			<br style="display: {{floor_f_status}};">
+			<button class="map_btn" style="display: {{floor_f_status}};" onclick="document.getElementById('map').src=map6">{{floor_f_name}}</button>
+			<br style="display: {{floor_g_status}};">
+			<br style="display: {{floor_g_status}};">
+			<button class="map_btn" style="display: {{floor_g_status}};" onclick="document.getElementById('map').src=map7">{{floor_g_name}}</button>
+			<br style="display: {{floor_h_status}};">
+			<br style="display: {{floor_h_status}};">
+			<button class="map_btn" style="display: {{floor_h_status}};" onclick="document.getElementById('map').src=map8">{{floor_h_name}}</button>
+			<br style="display: {{floor_i_status}};">
+			<br style="display: {{floor_i_status}};">
+			<button class="map_btn" style="display: {{floor_i_status}};" onclick="document.getElementById('map').src=map9">{{floor_i_name}}</button>
+
+		</div>
+	</div>
+
+
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+</body>
+</html>

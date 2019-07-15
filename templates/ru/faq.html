@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style="background: 1920px 1080px url('{{ url_for('static', filename='images/faq_bg.jpg') }}');">
+
+		
+	<div id="bar" class="row">
+		<a href="/{{previous_page}}" class="back_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/back.png') }}" width="32" style="text-align: center;"></a>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<div class="col-sm-6">Помощь</div>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<a href="/" class="faq_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/home.png') }}" width="32" style="text-align: center;"></a>
+	</div>
+	<div class="row">
+		<div id="answers">
+			<h1>Question №1</h1>
+			<img src="{{ url_for('static', filename='images/no-image.jpg') }}" class="leftimg" width="200px">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis euismod velit. In gravida felis sit amet pharetra pulvinar. Nam massa dolor, dapibus eu porta sed, maximus lobortis massa. Donec quis dolor at lectus congue mattis. Cras interdum diam in condimentum viverra. Mauris suscipit laoreet mauris, nec sodales risus facilisis vitae. Integer sit amet ornare nulla. Sed sed est sit amet elit aliquet dignissim et et tortor.</p>
+			<br>
+			<p>Integer metus nisi, dapibus suscipit dui eu, fermentum maximus felis. Integer blandit sem ut enim vehicula commodo nec vel dui. Etiam dignissim diam ac metus viverra, non accumsan ipsum dignissim. In hac habitasse platea dictumst. Donec augue lacus, dignissim quis aliquet ac, tincidunt ut libero. Cras quis pellentesque justo. Phasellus ac erat ullamcorper, congue tortor et, blandit lacus. Donec eget justo est. Aliquam congue neque quis dolor tincidunt ornare. Praesent semper tellus dui, vel fringilla ex gravida et. Donec imperdiet, velit non molestie fringilla, augue mauris porta massa, a tincidunt est metus sed odio. Vestibulum eros eros, euismod id imperdiet vel, finibus in lectus. Duis consectetur, eros a convallis iaculis, justo neque eleifend sem, ac dignissim metus eros eu tortor. Sed hendrerit, erat ac vehicula pellentesque, sapien felis sagittis nisl, a vestibulum nisl urna eu diam. Aenean gravida molestie nisl et volutpat. Integer in tristique ex.</p>
+			
+		</div>
+		<div id="questions">
+			<ul class="center" style="font-size: 30px; margin-top: 22px;">
+				<li>Question №1</li>
+				<br>
+				<li>Question №2</li>
+				<br>
+				<li>Question №3</li>
+				<br>
+				<li>Question №4</li>
+				<br>
+				<li>Question №5</li>
+				<br>
+				<li>Question №6</li>
+				<br>
+				<li>Question №7</li>
+				<br>
+				<li>Question №8</li>
+				<br>
+				<li>Question №9</li>
+				<br>
+				<li>Question №10</li>
+				<br>
+				<li>Question №11</li>
+				<br>
+				<li>Question №12</li>
+				<br>
+				<li>Question №13</li>
+				<br>
+				<li>Question №14</li>
+			</ul>
+		</div>
+	</div>
+
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+</body>
+</html>

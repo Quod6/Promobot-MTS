@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ панель</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin_style.css') }}"/>
+
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='images/bg.jpg') }}'); color: #f82133;">
+
+	<div class="row">
+		<div class="col-sm-8 center">
+			<form method="POST" enctype="multipart/form-data">
+				<h1 id="admingen">Общие настройки</h1>
+				<br>
+				<p>WIFI логин</p>
+				<input type="text" name="WIFI_login" value="{{WIFI_login}}">
+				<br>
+				<br>
+				<p>WIFI пароль</p>
+				<input type="text" name="WIFI_password" value="{{WIFI_password}}" style="text-transform: uppercase;">
+				<br>
+				<br>
+				<p>Программа мероприятия (формат файла - htm)</p>
+				<label for="uploadbtn" class="uploadButton">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="time" id="uploadbtn" type="htm"  value="{{ url_for('static', filename='time/time.htm') }}">
+				<br>
+				<br>
+				<p>Информация о мероприятии (формат файла - htm)</p>
+				<label for="uploadbtn" class="uploadButton">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="about" id="uploadbtn" type="htm"  value="XXX">
+				<br>
+				<br>
+
+				<h1 id="adminfaq">Вопросы / ответы</h1>
+				<br>
+				<p>Вопрос/ответ 1</p>
+				<input type="text" name="question_1">
+				<br>
+				<textarea name="answer_1" wrap="soft"></textarea> 
+				<br>
+				<br>
+				<p>Вопрос/ответ 2</p>
+				<input type="text" name="question_2">
+				<br>
+				<textarea name="answer_2"></textarea> 
+				<br>
+				<br>
+
+				<h1 id="adminmap">Карта (размер изображений - 1460х1080, формат png)</h1>
+				<br>
+				<span>Введите число загружаемых карт (от 0 до 9)</span>
+				<input id="floor_number" type="text" name="floor_number" title="Применится после применения всех остальных изменений." value="{{floor_number}}" style="color: #afa6a6;">
+				<br>
+				<br>
+				<p>{{floor_a_name}}</p>
+				<input type="text" name="floor_1_name" value="{{floor_a_name}}" {{ floor_a_status }}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_a_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_1" id="uploadbtn" accept="image/png" {{floor_a_status}}>
+				<br>
+				<br>
+				<p>{{floor_b_name}}</p>
+				<input type="text" name="floor_2_name" value="{{floor_b_name}}" {{floor_b_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_b_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_2" id="uploadbtn" accept="image/png" {{floor_b_status}}>
+				<br>
+				<br>
+				<p>{{floor_c_name}}</p>
+				<input type="text" name="floor_3_name" value="{{floor_c_name}}" {{floor_c_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_c_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_3" id="uploadbtn" accept="image/png" {{floor_c_status}}>
+				<br>
+				<br>
+				<p>{{floor_d_name}}</p>
+				<input type="text" name="floor_4_name" value="{{floor_d_name}}" {{floor_d_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_d_status}}">Загрузить файл</label>
+
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_4" id="uploadbtn" accept="image/png"  {{floor_d_status}}>
+				<br>
+				<br>
+				<p>{{floor_e_name}}</p>
+				<input type="text" name="floor_5_name" value="{{floor_e_name}}" {{floor_e_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_e_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_5" id="uploadbtn" accept="image/png" {{floor_e_status}}>
+				<br>
+				<br>
+				<p>{{floor_f_name}}</p>
+				<input type="text" name="floor_6_name" value="{{floor_f_name}}" {{floor_f_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_f_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_6" id="uploadbtn" accept="image/png" {{floor_f_status}}>
+				<br>
+				<br>
+				<p>{{floor_g_name}}</p>
+				<input type="text" name="floor_7_name" value="{{floor_g_name}}" {{floor_g_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_g_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_7" id="uploadbtn" accept="image/png" {{floor_g_status}}>
+				<br>
+				<br>
+				<p>{{floor_h_name}}</p>
+				<input type="text" name="floor_8_name" value="{{floor_h_name}}" {{floor_h_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_h_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_8" id="uploadbtn" accept="image/png" {{floor_h_status}}>
+				<br>
+				<br>
+				<p>{{floor_i_name}}</p>
+				<input type="text" name="floor_9_name" value="{{floor_i_name}}" {{floor_i_status}}>
+				<br>
+				<label for="uploadbtn" class="uploadButton {{floor_i_status}}">Загрузить файл</label>
+				<input style="opacity: 0; z-index: -1;" type="file" name="floor_9" id="uploadbtn" accept="image/png" {{floor_i_status}}>
+
+				<input type="text" name="login" placeholder="login"/>
+				<input type="text" name="password" placeholder="password"/>
+				<div style="margin-top: 50px;">
+					
+					<input type="submit" value="Применить изменения" style="color: #000;">
+				</div>
+
+			</form>
+		</div>
+		<div class="col-sm-4 center">
+			<div class="row profile" style="position: fixed;">
+				<div class=" left">
+					<img class="leftimg" src="{{ url_for('static', filename='images/profile_photo.jpg') }}" width="200" height="212">
+					Имя: <b>{{name}}</b>
+					<br>
+					Фамилия: <b>{{second_name}}</b>
+					<br>
+					<br>
+					<a href="/profile">Редактировать профиль</a>
+					<br>
+					{% if status == "default" %}
+						<a href="/profile" style="color: red; font-size: 13px;
+						">*Вы используете стандартные логин и пароль. Для безопасности системы измените логин и пароль.</a>
+					{% elif status == "bad" %}
+						<a href="/profile" style="color: red; font-size: 13px;
+						">*Вы используете стандартный пароль. Для повышения безопасности измените пароль.</a>
+					{% else %}
+
+					{% endif %}
+				</div>
+
+				{% if password_error == True %}
+				<div class="hr"></div>
+				<b style="font-size: 27px;" class="center">*Введен неверный пароль</b>
+				{% else %}
+
+				{% endif %}
+
+				<div class="hr"></div>
+				<ul class="left nav">
+					<li><a href="#admingen">Общие настройки</a></li>
+					<li><a href="#adminfaq">Вопросы/ответы</a></li>
+					<li><a href="#adminmap">Карта</a></li>
+				</ul>
+				
+				
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

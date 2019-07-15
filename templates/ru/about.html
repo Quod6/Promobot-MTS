@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/xlsx.full.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/FileSaver.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+
+
+	<div id="bar" class="row">
+		<a href="/" class="back_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/back.png') }}" width="32" style="text-align: center;"></a>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<div class="col-sm-6">Информация о мероприятии</div>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<div class="row col-sm-2">
+			<a href="#" class="faq_btn col-sm-4 popup_btn js-button-campaign-about"><img src="{{ url_for('static', filename='images/elements/sound.png') }}" width="32" style="text-align: center;" onclick="about()"></a>
+			<div class="vert_line col-sm-4"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+			<a href="/faq" class="faq_btn col-sm-4"><img src="{{ url_for('static', filename='images/elements/faq.png') }}" width="32" style="text-align: center;"></a>
+		</div>
+		
+	</div>
+	
+
+	<div id="info">
+		<IFRAME seamless width="1760" height="860" scroling="no" frameborder='0' src="{{ url_for('static', filename='about.htm') }}" style="background: #fff; overflow-x: hidden;"></IFRAME>
+			<!--<h1>Lorem ipsum</h1>
+			<img src="{{ url_for('static', filename='images/no-image.jpg') }}" class="leftimg" width="200px">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis euismod velit. In gravida felis sit amet pharetra pulvinar. Nam massa dolor, dapibus eu porta sed, maximus lobortis massa. Donec quis dolor at lectus congue mattis. Cras interdum diam in condimentum viverra. Mauris suscipit laoreet mauris, nec sodales risus facilisis vitae. Integer sit amet ornare nulla. Sed sed est sit amet elit aliquet dignissim et et tortor.</p>
+			<br>
+			<p>Integer metus nisi, dapibus suscipit dui eu, fermentum maximus felis. Integer blandit sem ut enim vehicula commodo nec vel dui. Etiam dignissim diam ac metus viverra, non accumsan ipsum dignissim. In hac habitasse platea dictumst. Donec augue lacus, dignissim quis aliquet ac, tincidunt ut libero. Cras quis pellentesque justo. Phasellus ac erat ullamcorper, congue tortor et, blandit lacus. Donec eget justo est. Aliquam congue neque quis dolor tincidunt ornare. Praesent semper tellus dui, vel fringilla ex gravida et. Donec imperdiet, velit non molestie fringilla, augue mauris porta massa, a tincidunt est metus sed odio. Vestibulum eros eros, euismod id imperdiet vel, finibus in lectus. Duis consectetur, eros a convallis iaculis, justo neque eleifend sem, ac dignissim metus eros eu tortor. Sed hendrerit, erat ac vehicula pellentesque, sapien felis sagittis nisl, a vestibulum nisl urna eu diam. Aenean gravida molestie nisl et volutpat. Integer in tristique ex.</p>
+			<br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis euismod velit. In gravida felis sit amet pharetra pulvinar. Nam massa dolor, dapibus eu porta sed, maximus lobortis massa. Donec quis dolor at lectus congue mattis. Cras interdum diam in condimentum viverra. Mauris suscipit laoreet mauris, nec sodales risus facilisis vitae. Integer sit amet ornare nulla. Sed sed est sit amet elit aliquet dignissim et et tortor.</p>
+			<br>
+			<p>Integer metus nisi, dapibus suscipit dui eu, fermentum maximus felis. Integer blandit sem ut enim vehicula commodo nec vel dui. Etiam dignissim diam ac metus viverra, non accumsan ipsum dignissim. In hac habitasse platea dictumst. Donec augue lacus, dignissim quis aliquet ac, tincidunt ut libero. Cras quis pellentesque justo. Phasellus ac erat ullamcorper, congue tortor et, blandit lacus. Donec eget justo est. Aliquam congue neque quis dolor tincidunt ornare. Praesent semper tellus dui, vel fringilla ex gravida et. Donec imperdiet, velit non molestie fringilla, augue mauris porta massa, a tincidunt est metus sed odio. Vestibulum eros eros, euismod id imperdiet vel, finibus in lectus. Duis consectetur, eros a convallis iaculis, justo neque eleifend sem, ac dignissim metus eros eu tortor. Sed hendrerit, erat ac vehicula pellentesque, sapien felis sagittis nisl, a vestibulum nisl urna eu diam. Aenean gravida molestie nisl et volutpat. Integer in tristique ex.</p>-->
+	</div>
+	
+
+	<!--POPUP-about-START-->
+	<div class="overlay js-overlay-campaign-about">
+		<div class="popup js-popup-campaign-about" style="padding: 50px 0 30px 0">
+
+			<video id="video" loop="loop" width="950" preload="auto" style="margin: 0;">
+				<source src="{{ url_for('static', filename='images/waveform.mp4') }}" type="video/mp4;">
+			</video>
+
+			<audio id="myaudio" loop="loop">
+				<source src="{{ url_for('static', filename='images/about.mp3') }}" type="audio/mp3;">
+			</audio>
+
+			<!--<div class="row center">
+				<div class="col-sm-6">
+					<input type="button" value="" onclick="PlayPause()" class="control_btn" style="background: url('{{ url_for('static', filename='images/elements/playpause.png') }}'); background-size: 100px 40px; background-repeat: no-repeat; background-position: center;"></input>
+				</div>
+				<div class="col-sm-6">
+					<input type="button" value="" onclick="StopPlay()" class="control_btn" style="background: url('{{ url_for('static', filename='images/elements/playfromstart.png') }}'); background-size: 100px 30px; background-repeat: no-repeat; background-position: center;"></input>
+				</div>
+			</div>-->
+			
+			<div class="close-popup-bg js-close-campaign-about" onclick="StopPause();">О мероприятии</div>
+			<div class="close-popup js-close-campaign-about" onclick="StopPause();"></div>
+		</div>
+	</div>
+	<!--POPUP-about-END-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/player.js') }}"></script>
+
+
+
+</body>
+</html>

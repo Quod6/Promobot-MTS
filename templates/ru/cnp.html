@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+
+        <div id="bar" class="row">
+            <a href="/" class="back_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/back.png') }}" width="32" style="text-align: center;"></a>
+            <div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+            <div class="col-sm-6">Регистрация нового пользователя</div>
+            <div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+            <a href="/faq" class="faq_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/faq.png') }}" width="32" style="text-align: center;"></a>
+        </div>
+    
+
+    <div id="info">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6 center">
+                    <img src="{{ url_for('static', filename='images/no-image.jpg') }}" alt="" height="700px">
+                    <br>
+                    <br>
+                    <form method="POST" enctype="multipart/form-data">
+                    <input type="text" name="nameMTS" placeholder="Ваше имя...">
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6"><input type="submit" name="status" class="btn next" value="Возможно позже" style="width: 300px"></div>
+                        <div class="col-sm-6"><input type="submit" name="status" class="btn next" value="Продолжить" style="width: 300px"></div>
+                    </div>
+                    </form>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/player.js') }}"></script>
+</body>
+</html> 

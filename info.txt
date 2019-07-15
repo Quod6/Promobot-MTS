@@ -1,0 +1,3 @@
+adminconfig.txt - Логин, пароль от WiFi
+config.cfg - данные сервера
+

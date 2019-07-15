@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body style=" background: #fff;">
+
+
+	<div class="row" >
+
+		<div id="camera" class="col-sm-9">
+			    
+					<div id="filter_selector" class="row" style="opacity: 0;">
+							<div class="filter col-sm-4" onclick="hideFilter()">
+								<div class="filter_example">
+									<img src="{{ url_for('static', filename='images/filter/matrix_ex.jpg') }}" type="image/jpg" width="292" height="142" onclick="Matrix()">
+								<p>Матрица</p>
+								</div>
+							</div>
+							<div class="filter col-sm-4" onclick="hideFilter()">
+								<div class="filter_example">
+
+										<img src="{{ url_for('static', filename='images/filter/terminator_ex.jpg') }}" type="image/jpg" width="292" height="142" onclick="Terminator()">
+
+								<p>Терминатор</p>
+								</div>
+							</div>
+							<div class="filter col-sm-4" onclick="hideFilter()">
+								<div class="filter_example">
+
+										<img src="{{ url_for('static', filename='images/filter/clear_ex.jpg') }}" type="image/jpg" width="292" height="142" onclick="Fclear()">
+
+								<p>Без фильтров</p>
+								</div>
+							</div>
+
+						</div>
+
+
+
+
+				  <div class="app" style="margin-top: -250px;" onclick="hideFilter()" >
+
+				    <a href="#" id="start-camera" class="visible"></a>
+				    <img id="overlay-t" style="background: url('{{ url_for('static', filename='images/filter/terminator.png') }}'); background-size: 1435px 1080px; " src="{{ url_for('static', filename='images/filter/terminator.png') }}">
+				    <video id="camera-stream" style="z-index: 1; width: 1450px; height: 1080px; margin-left: -10px; margin-top: -1080px;" autoplay></video>
+				    <img id="overlay-m" style="background: url('{{ url_for('static', filename='images/filter/matrix.png') }}'); background-size: 1435px 1080px; " src="{{ url_for('static', filename='images/filter/matrix.png') }}">
+				    
+				    
+
+				    <p id="error-message"></p>
+
+					
+				    <div  class="controls row">
+				    	
+				    	<div class="col-sm-12">
+				    		<div class="row">
+
+				    			<div class="col-sm-3"></div>
+				    			<div class="col-sm-6"> <a href="#" id="delete-photo" title="Delete Photo" class="disabled" style="margin-top:380px; padding: 40px;">переснять</a></div>
+				    			<div class="col-sm-3"></div>
+				    		</div>
+				    		<div class="row">
+				    			<div class="col-sm-3"></div>
+				    			<div class="col-sm-6"><a href="#"  id="download-photo" download="selfie.png" title="Save Photo" class="disabled" style="margin-top:100px; padding: 40px;" onclick="preSendMail()">отправить на почту</a>  </div>
+				    			<div class="col-sm-3"></div>
+				    		</div>
+				    	</div>
+
+				    </div>
+				    
+
+				    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+				    <canvas></canvas>
+
+	<div id="overlay"></div>
+	
+				  </div>
+
+		</div>
+
+		<div id="camera_bar" class="col-sm-3">
+			
+			
+				<div class="row">
+					<div class="col-sm-2">
+						
+					</div>
+					<div class="col-sm-8">
+					<button id="filter" style="margin-left: -6px " onclick="showFilter();"><img src="{{ url_for('static', filename='images/elements/rgb.png') }}" width="300"></button>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row" onclick="hideFilter()">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+					<div id="take_a_photo" style="margin-left: -6px"><button id="take-photo" class="js-button-campaign-save"></button></div>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row" onclick="hideFilter()">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+					<a href="/" class="back_btn" style="margin-left: -6px"><img src="{{ url_for('static', filename='images/elements/back_w.png') }}" width="300"></a>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+			
+			
+		</div>
+	</div>
+	
+	 <!--POPUP-save-START-->
+	<div class="overlay js-overlay-campaign-save">
+		<div class="popup js-popup-campaign-save">
+			<h2>Выберете что дальше делать с фотографией.</h2>
+			<div class="row">
+
+			<img id="snap" class="left">
+			<div class="right">
+				<select>
+			    <option selected disabled>Выберите что делать</option>
+			    <option value="Mail">E-Mail</option>
+			    <option value="Print">Печать</option>
+
+			   </select>
+			</div>
+
+			</div>
+			<div class="close-popup-bg js-close-campaign-save">Сфотались. Что дальше?</div>
+			<div class="close-popup js-close-campaign-save"></div>
+		</div>
+	</div>
+	<!--POPUP-save-END-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+
+
+</body>
+</html>

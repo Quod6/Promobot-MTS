@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+
+
+			<div class="row">
+
+				<div id="menu" class="col-sm-9">
+			    	<ul>
+			    		<li>
+			    			<div class="row">
+				    			<div class="col-sm-7" style="margin-top: 68px;">
+				    				<div class="row">
+
+						    			<a href="/map" class="big_button button" style="padding-top: 136px; padding-left: 4px; font-size: 136px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/map.jpg') }}');">Карта</a>
+
+					    			</div>
+				    				<div class="row">
+
+						    			<a href="/time" class="big_button button" style="padding-top: 130px; padding-left: 10px; font-size: 72px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/time.jpg') }}');">Программа мероприятия</a>
+
+					    			</div>
+				    			</div>
+				    			<div class="col-sm-5" style="margin-top: 42px;">
+				    				<div class="row" style="margin-left: 68px;">
+
+						    			<!--<a href="/insta" class="small_button button" style="padding-top: 144px; padding-left: 4px; font-size: 25px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/inst.jpg') }}');">Instagram</a>
+						    		
+						    			<a href="#" class="small_button button popup_btn js-button-campaign-about" style="padding-top: 130px; padding-left: 2px; font-size: 20px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/about.jpg') }}');" onclick="about();">рассказать о мероприятии</a>-->
+						    			<a href="/about" class="wifi_button button popup_btn js-button-campaign-about" style="padding-top: 140px; padding-left: 2px; font-size: 20px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/info2.jpg') }}');">Информация о мероприятии</a>
+
+						    		</div>	
+									<div class="row" style="margin-left: 68px;">
+
+						    			<a href="/photo" class="wifi_button button" style="padding-top: 140px; padding-left: 2px; font-size: 22px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/photo.jpg') }}');"></a>
+						    		
+						    			
+
+						    		</div>	
+									<div class="row" style="margin-left: 68px;">
+
+						    			<a href="#" class="wifi_button button popup_btn js-button-campaign-wifi" style=" background-image: url('{{ url_for('static', filename='images/bgimages/wifi.jpg') }}');"></a>
+
+						    		</div>	
+									<div class="row" style="margin-left: 68px;">
+
+						    			<!--<a href="#" class="small_button button popup_btn js-button-campaign-faq" style="padding-top: 140px; padding-left: 4px; font-size: 28px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/faq.jpg') }}');">Помощь</a>-->
+						    			<a href="/help" class="small_button button " style="padding-top: 140px; padding-left: 4px; font-size: 28px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/faq.jpg') }}');">Помощь</a>
+
+						    			<a href="#" class="small_button button popup_btn js-button-campaign-lang" style="padding-top: 130px; padding-left: 4px; font-size: 44px; background-image: url('{{ url_for('static', filename='images/bgimages_orig/lang.jpg') }}');">Язык</a>
+
+						    		</div>	
+				    			</div>
+			    			</div>
+			    		</li>
+			    	</ul>
+	    		</div>
+
+	    		
+
+	    		<div id="partners" class="col-sm-3">
+			    	<div class="separator"></div>
+			    	<ul>
+			    		<li>
+			    			<div class="row">
+			    				<a href="#" class="partners_button button js-button-campaign-mts" style=" background-image: url('{{ url_for('static', filename='images/logo/mts.jpg') }}');"></a>
+			    			</div>
+			    			<div class="row">
+			    				<a href="#" class="partners_button button js-button-campaign-crd" style=" background-image: url('{{ url_for('static', filename='images/logo/crd2.jpg') }}');"></a>
+			    			</div>
+			    		</li>
+			    	</ul>
+			    </div>
+
+			</div>
+
+    <!--POPUP-mts-START-->
+	<div class="overlay js-overlay-campaign-mts">
+		<div class="popup js-popup-campaign-mts">
+			<h2>МТС</h2>
+			<img class="leftimg" src="{{ url_for('static', filename='about/mts/photo1.jpg') }}" width="250" height="300">
+			<div class="justify" style="margin: 5px 0 0 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed cursus est. Ut nec semper diam, ut feugiat quam. Praesent pellentesque sollicitudin mi a molestie. Maecenas iaculis tellus dictum tempor dictum. Donec et eros venenatis, blandit ex nec, eleifend erat. Fusce varius turpis augue, vel porttitor lacus dapibus nec. Aenean porttitor id turpis quis cursus. Maecenas sagittis ante sit amet nisl lobortis venenatis. Nunc congue eros sed tortor ultricies, sed efficitur lacus pulvinar. Duis eu ligula lorem. Nullam iaculis at mi non sodales. Duis egestas sapien quis orci mollis laoreet. In hac habitasse platea dictumst. Pellentesque nec sem id nunc bibendum congue. Phasellus tempus tellus a augue porta, ac eleifend mauris dapibus. Mauris mauris lacus, euismod in pharetra ac, venenatis at massa.
+
+			
+			</div>
+			<div class="close-popup-bg js-close-campaign-mts">Информация - МТС</div>
+			<div class="close-popup js-close-campaign-mts"></div>
+		</div>
+	</div>
+	<!--POPUP-mts-END-->
+
+	<!--POPUP-crd-START-->
+	<div class="overlay js-overlay-campaign-crd">
+		<div class="crd_popup js-popup-campaign-crd">
+			<h2>Центр Развития Робототехники</h2>
+			<img class="leftimg" src="{{ url_for('static', filename='about/crd/photo1.jpg') }}" width="250" height="300">
+			<div class="justify" style="margin: 5px 0 0 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed cursus est. Ut nec semper diam, ut feugiat quam. Praesent pellentesque sollicitudin mi a molestie. Maecenas iaculis tellus dictum tempor dictum. Donec et eros venenatis, blandit ex nec, eleifend erat. Fusce varius turpis augue, vel porttitor lacus dapibus nec. Aenean porttitor id turpis quis cursus. Maecenas sagittis ante sit amet nisl lobortis venenatis. Nunc congue eros sed tortor ultricies, sed efficitur lacus pulvinar. Duis eu ligula lorem. Nullam iaculis at mi non sodales. Duis egestas sapien quis orci mollis laoreet. In hac habitasse platea dictumst. Pellentesque nec sem id nunc bibendum congue. Phasellus tempus tellus a augue porta, ac eleifend mauris dapibus. Mauris mauris lacus, euismod in pharetra ac, venenatis at massa.
+
+			Aenean tristique nisi purus, quis vestibulum dolor laoreet eget. Aenean mauris leo, egestas nec sodales a, mattis a felis. Curabitur venenatis hendrerit diam, ut fringilla purus vulputate nec. Integer eget neque mauris. Quisque sagittis cursus mauris nec efficitur. In ac dui vitae felis tincidunt aliquam vitae vel orci. Maecenas sollicitudin leo quis enim placerat tincidunt sit amet sit amet urna. Mauris lacinia at lacus ut hendrerit. Morbi malesuada eu elit a tempus. Sed suscipit orci turpis, sit amet elementum erat placerat vitae. Nulla tempor metus in mi faucibus pellentesque. Nunc consectetur risus enim, a consectetur lectus vestibulum a. Aenean semper commodo malesuada. Cras efficitur a ante sed porttitor. Aliquam erat volutpat. Donec urna nisi, dapibus sit amet sem sed, dapibus laoreet lectus.
+		    </div>
+			<div class="crd_close-popup-bg js-close-campaign-crd">Информация - ЦРР</div>
+			<div class="close-popup js-close-campaign-crd"></div>
+		</div>
+	</div>
+	<!--POPUP-crd-END-->
+
+    <!--POPUP-WIFI-START-->
+	<div class="overlay js-overlay-campaign-wifi">
+		<div class="popup js-popup-campaign-wifi">
+			<b style="font-size: 25px;">Логин: </b> {{WIFI_login}}
+			<br>
+			<br>
+			<b style="font-size: 25px;">Пароль: </b> {{WIFI_password}}
+			<div class="close-popup-bg js-close-campaign-wifi">WI-FI</div>
+			<div class="close-popup js-close-campaign-wifi"></div>
+		</div>
+	</div>
+	<!--POPUP-WIFI-END-->
+
+	<!--POPUP-nav-START-->
+	<div class="overlay js-overlay-campaign-nav">
+		<div class="popup js-popup-campaign-nav">
+			<h2 style="text-align: center; font-size: 17px; margin-bottom: 10px;">Введите или выберите из предложенных интересующее вас место</h2>
+			<div class="center">
+				<input type="txet" name="help" placeholder="Введите интересующий вас вопрос">
+			</div>
+			
+			<br>
+
+			<div class="row center">
+				<div class="col-sm-4">
+					<button class="colourful_button" style="background: #d82133"><b>Popular1</b></button>
+				</div>
+				<div class="col-sm-4">
+					<button class="colourful_button" style="background: #d82133"><b>Popular2</b></button>
+				</div>
+				<div class="col-sm-4">
+					<button class="colourful_button" style="background: #d82133"><b>Popular3</b></button>
+				</div>
+			</div>
+			<div class="close-popup-bg js-close-campaign-nav">Путеводитель</div>
+			<div class="close-popup js-close-campaign-nav"></div>
+		</div>
+	</div>
+	<!--POPUP-nav-END-->
+
+	<!--POPUP-faq-START-->
+	<div class="overlay js-overlay-campaign-faq">
+		<div class="popup js-popup-campaign-faq">
+
+			<h2 style="text-align: center; font-size: 20px; margin-bottom: 10px;">Выберите из предложенных интересующий вас вопрос</h2>
+			<div class="row center">
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular1</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular2</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular3</b></button>
+				</div>
+			</div>
+
+			<div class="row center">
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular1</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular2</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular3</b></button>
+				</div>
+			</div>
+
+			<div class="row center">
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular1</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular2</b></button>
+				</div>
+				<div class="col-sm-4" style="margin-top: 10px;">
+					<button class="colourful_button"><b>Popular3</b></button>
+				</div>
+			</div>
+
+			<div class="close-popup-bg js-close-campaign-faq">Помощь</div>
+			<div class="close-popup js-close-campaign-faq"></div>
+		</div>
+	</div>
+	<!--POPUP-faq-END-->
+
+    <!--POPUP-lang-START-->
+	<div class="overlay js-overlay-campaign-lang">
+		<div class="popup js-popup-campaign-lang">
+			<div class="row">
+				<div class="col-sm-4 center">
+					<button id="ru" class="lang_btn" name="ru" onclick="ru()"><img src="{{ url_for('static', filename='images/lang/ru_active.png') }}" width="100"></button>
+				</div>
+				<div class="col-sm-4 center">
+					<button id="en" class="lang_btn" name="en" onclick="en()"><img src="{{ url_for('static', filename='images/lang/en.png') }}" width="100"></button>
+				</div>
+				<div class="col-sm-4 center">
+					<button id="ch" class="lang_btn" name="ch" onclick="ch()"><img src="{{ url_for('static', filename='images/lang/ch.png') }}" width="100"></button>
+				</div>
+			</div>
+			<div class="close-popup-bg js-close-campaign-lang">Язык</div>
+			<div class="close-popup js-close-campaign-lang"></div>
+		</div>
+	</div>
+	<!--POPUP-lang-END-->
+
+	<!--POPUP-about-START-->
+	<div class="overlay js-overlay-campaign-about">
+		<div class="popup js-popup-campaign-about" style="padding: 50px 0 30px 0">
+
+			<video id="video" loop="loop" width="950" preload="auto" style="margin: 0;">
+				<source src="{{ url_for('static', filename='images/waveform.mp4') }}" type="video/mp4;">
+			</video>
+
+			<audio id="myaudio" loop="loop">
+				<source src="{{ url_for('static', filename='images/about.mp3') }}" type="audio/mp3;">
+			</audio>
+
+			<!--<div class="row center">
+				<div class="col-sm-6">
+					<input type="button" value="" onclick="PlayPause()" class="control_btn" style="background: url('{{ url_for('static', filename='images/elements/playpause.png') }}'); background-size: 100px 40px; background-repeat: no-repeat; background-position: center;"></input>
+				</div>
+				<div class="col-sm-6">
+					<input type="button" value="" onclick="StopPlay()" class="control_btn" style="background: url('{{ url_for('static', filename='images/elements/playfromstart.png') }}'); background-size: 100px 30px; background-repeat: no-repeat; background-position: center;"></input>
+				</div>
+			</div>-->
+			
+			<div class="close-popup-bg js-close-campaign-about" onclick="StopPause();">О мероприятии</div>
+			<div class="close-popup js-close-campaign-about" onclick="StopPause();"></div>
+		</div>
+	</div>
+
+	<!--POPUP-about-END-->
+
+	{% if person_status == "staff_CNP_staff" %}
+		<!--показть окно регистрации-->	
+		<a href="/cnp" style="color: red;">Зарегистрируйтесь.</a>
+	{% else %}
+		<!--аудиоприветствие-->
+		<p style="color: green;">Здравствуйте, {{person_status}}!</p>
+	{% endif %}
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/player.js') }}"></script>
+</body>
+</html> 

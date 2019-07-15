@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>MTSpromobot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/xlsx.full.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/FileSaver.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-grid.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body style=" background-image: url('{{ url_for('static', filename='images/bg.jpg') }}');">
+
+
+	<div id="bar" class="row">
+		<a href="/" class="back_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/back.png') }}" width="32" style="text-align: center;"></a>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<div class="col-sm-6">Программа мероприятия</div>
+		<div class="vert_line col-sm-1"><img src="{{ url_for('static', filename='images/elements/vert_line.jpg') }}" height="32"></div>
+		<a href="/faq" class="faq_btn col-sm-2"><img src="{{ url_for('static', filename='images/elements/faq.png') }}" width="32" style="text-align: center;"></a>
+	</div>
+
+	
+
+		<IFRAME seamless width="1920" height="950" scroling="no" frameborder='0' src="{{ url_for('static', filename='time/time.htm') }}" style="background: #fff; overflow-x: hidden;"></IFRAME>
+
+
+
+</body>
+</html>
