@@ -21,6 +21,8 @@ void setup() {
 //  matrix.setPosition(2, 2, 0); // The third display is at <2, 0>
 //  matrix.setPosition(3, 3, 0); // And the last display is at <3, 0>
 
+
+//настройка позиций экранов
 matrix.setPosition(0, 0, 0);
 matrix.setPosition(2, 1, 0);
 matrix.setPosition(4, 2, 0);
@@ -33,6 +35,8 @@ matrix.setPosition(7, 3, 1);
 //  ...
 //matrix.setRotation(0, 1);    // The first display is position upside down
 
+
+//настройка ориентации экранов
 matrix.setRotation(0, 1);
 matrix.setRotation(2, 1);
 matrix.setRotation(4, 1);
@@ -42,9 +46,12 @@ matrix.setRotation(3, 1);
 matrix.setRotation(5, 1);
 matrix.setRotation(7, 1);
 
+//очитска экрана и рисовыание глаз
 matrix.fillScreen(LOW);
 matrix.write();
 glaza();
+//за функцию отрисовки глаз отвечает функция glaza();
+
 //  matrix.setRotation(3, 2);    // The same hold for the last display
 }
 
@@ -52,6 +59,12 @@ int wait = 50;
 int inc = -2;
 
 void loop() {
+  //подмигивание - winking();
+  //моргание - blinking();
+  //грусть или как говорит Саша Коваль - sad();
+  //xx глаза - xx();
+
+  //сейчас код считываеет символ с Serial монитора и выводит нужную картинку
   char cmd = Serial.read();
   while (1)
   {
