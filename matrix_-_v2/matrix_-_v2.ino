@@ -61,8 +61,6 @@ int inc = -2;
 void loop() {
   //подмигивание - winking();
   //моргание - blinking();
-  //грусть или как говорит Саша Коваль - sad();
-  //xx глаза - xx();
 
   //сейчас код считываеет символ с Serial монитора и выводит нужную картинку
   char cmd = Serial.read();
@@ -75,14 +73,6 @@ void loop() {
     else if (cmd == 'b')
     {
       blinking();
-    }
-    else if (cmd == 's')
-    {
-      sad();
-    }
-    else if (cmd == 'x')
-    {
-      xx();
     }
     else if (cmd == 'd' || cmd == 'g')
     {
